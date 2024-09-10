@@ -55,10 +55,9 @@ public class ClockDisplaySeconds
         //checking to see if value rolled over to 0
         if(seconds.getValue() == 0){
             minutes.increment();
-        }
-        //checking to see if value rolled over to 0
-        if(minutes.getValue() == 0){
+            if(minutes.getValue() == 0){
             hours.increment();
+            }
         }
         updateDisplay();
     }
